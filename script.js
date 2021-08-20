@@ -9,18 +9,13 @@ function generatePassword() {
   var lowerCase = upperCase.toLowerCase();
   var special = "!@#$%^&*()_+~";
   var value = [];
-
   var possOutcome = "";
-
   var password = "";
 
-
-
-
-
   var passChoice = prompt("How many characteers would you like the password to be.  Please choose between 8 and 128 characters in length.");
-  if (passChoice < 9 || passChoice > 128) {
+  while (passChoice < 8 || passChoice > 128) {
     passChoice = prompt("Please choose between 8 and 128 characters.");
+
   }
 
 
@@ -60,8 +55,8 @@ function generatePassword() {
   }
 
   for (var i = 0; i < passChoice - value.length; i++) {
-    var randomChoice = Math.floor(Math.random() * passChoice.length);
-    password += passChoice[randomChoice];
+    var randomChoice = Math.floor(Math.random() * possOutcome.length);
+    password += possOutcome[randomChoice];
   }
 
   password += value.join('');
