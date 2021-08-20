@@ -4,11 +4,10 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
 
-  var passChoose = prompt("How many characteers would you like the password to be.  Please choose between 8 and 128 characters in length.");
+  var passChoice = prompt("How many characteers would you like the password to be.  Please choose between 8 and 128 characters in length.");
   if (passChoice < 8 || passChoice > 128) {
     passChoice = prompt("Please choose between 8 and 128 characters.");
-    return generatePassword();
-  }
+}
 
   
   var userUpperCase = confirm("Would you like uppercase letters?");
@@ -30,37 +29,38 @@ function generatePassword() {
   
   var value = [];
 
-
+  var possOutcome = "";
 
   if (userUpperCase) {
     var randomChoice = Math.floor(Math.random() * upperCase.length);
     var upperChoice = upperCase[randomChoice];
     value.push(upperChoice);
-    console.log(upperChoice);
+    possOutcome = possOutcome.concat(upperCase)
   }
-  
+ 
   if (userLowerCase) {
     var randomChoice = Math.floor(Math.random() * lowerCase.length);
     var lowerChoice = lowerCase[randomChoice];
     value.push(lowerChoice);
-    console.log(lowerChoice);
+    possOutcome = possOutcome.concat(lowerCase)
   }
   
   if (userNumbers) {
     var randomChoice = Math.floor(Math.random() * numbers.length);
     var numChoice = numbers[randomChoice];
     value.push(numChoice);
-    console.log(numChoice);
+    possOutcome = possOutcome.concat(numbers)
   }
-  
+
   if (userSpecial) {
     var randomChoice = Math.floor(Math.random() * special.length);
     var specialChoice = special[randomChoice];
     value.push(specialChoice);
-    console.log(specialChoice);
+    possOutcome = possOutcome.concat(special)
   }
   
-  for (var i = 0; i < randomChoice.length; i++){
+  for (var i = 0; i < passChoice.length; i++) {
+
 
   }
   
