@@ -18,7 +18,7 @@ Click the "Generate Password" button and follow the prompts to generate a person
 ## Screenshot
  
 
-![me](assets\passwordgeneratorsite.png)
+![me](assets\passwordgenerators.png)
 
 ## Languages
 HTML, CSS, and JavaScript
